@@ -1,0 +1,11 @@
+<ActionBar title="My App" class="action-bar"></ActionBar>
+<!-- <Image src="~/images/apple.jpg"></Image> -->
+
+<ListView [items]="items">
+    <ng-template let-item="item">
+        <StackLayout>
+            <Image src="{{item._embedded['wp:featuredmedia'][0].media_details.sizes.thumbnail.source_url}}"></Image>
+            <Label text="{{item.title.rendered}}"></Label>
+        </StackLayout>
+    </ng-template>
+</ListView>
